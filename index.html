@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Vite App</title>
+    <style>
+     
+
+      body {
+        background: black;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title"></div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module">
+      import gsap from "gsap";
+
+      const text =
+        "🚀 Welcome Aboard the Orbit of Wonder! 🌌"
+;
+      const titleElement = document.getElementById("title");
+
+      // Animate typewriter
+      gsap.to(titleElement, {
+        duration: text.length * 0.1,
+        text: text,
+        ease: "none",
+        onUpdate: function () {
+          titleElement.textContent = text.substring(
+            0,
+            Math.floor(this.progress() * text.length)
+          );
+        },
+        onComplete: function () {
+          titleElement.style.borderRight = "none";
+        },
+      });
+    </script>
+  </body>
+</html>
