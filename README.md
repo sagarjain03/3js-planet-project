@@ -48,4 +48,4 @@ Acknowledgments
 Polyhaven for free HDRI maps.
 Three.js for the amazing 3D library.
 GSAP for smooth animations.
-Happy coding! 🚀 ```
+Happy coding! 🚀 
